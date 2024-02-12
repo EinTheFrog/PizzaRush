@@ -8,6 +8,7 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] private Menu menu;
     [SerializeField] private FinishMenu finishMenu;
+    [SerializeField] private TimerText timerText;
 
     private float startTime = 0f;
     private bool finished = false;
@@ -26,6 +27,7 @@ public class LevelManager : MonoBehaviour
         {
             OnMenuButtonPressed();
         }
+        timerText.SetTime(Time.time - startTime);
     }
 
     public void OnCheckpointEnter()
@@ -36,6 +38,11 @@ public class LevelManager : MonoBehaviour
     public void GoToMainMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private bool MenuButtonPressed()

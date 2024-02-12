@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class TimeInfoText : MonoBehaviour
+public class TimerText : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI text;
 
