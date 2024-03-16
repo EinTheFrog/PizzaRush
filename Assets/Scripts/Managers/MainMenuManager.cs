@@ -7,10 +7,7 @@ public class MainMenuManager : MonoBehaviour
 {
     public void StartLevel(int levelNumber)
     {
-        switch (levelNumber)
-        {
-            case 1: SceneManager.LoadScene(1); break;
-        }
+        SceneManager.LoadScene(levelNumber);
     }
 
     public void Quit()
